@@ -1,0 +1,6 @@
+
+˜
+java:S1488"dImmediately return this expression instead of assigning it to the temporary variable "kieContainer".b ef14afcee1da0829ada86e007a774beeh
+n
+java:S1118":Add a private constructor to hide the implicit public one.b 98933903977ab0fd6770dddecc80b53ah
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.8ë¿ÞŠ¿1b e70ca8e73611cccd229a5c1efc8e9cdch

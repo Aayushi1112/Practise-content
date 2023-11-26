@@ -1,0 +1,9 @@
+
+ç	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b 0f532ad71a20b2a182551ae347f2254ch
+t
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.b cd73502828457d15655bbd7a63fb0bc8h
+Z
+java:S1452"&Remove usage of generic wildcard type.b d1457b72c3fb323a2671125aef3eab5dh
+Z
+java:S1452%"&Remove usage of generic wildcard type.b d1457b72c3fb323a2671125aef3eab5dh
+v	java:S125+"<This block of commented-out lines of code should be removed.8Á“®Éª1b 7aa17636b9f6943898cd45e240334647h

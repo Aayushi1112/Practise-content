@@ -1,0 +1,5 @@
+
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b be95708a26cfa7a9bda008f278567654h
+’	java:S116"XRename this field "CreatedOnDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.8ม่ยป1b ab5e604aeb429b391b9f6d13ca5d441eh
+f
+java:S1128"+Remove this unused import 'java.util.Date'.8ชฦฯป1b c51dfda6afc6b826c509c14b0a183fc7h

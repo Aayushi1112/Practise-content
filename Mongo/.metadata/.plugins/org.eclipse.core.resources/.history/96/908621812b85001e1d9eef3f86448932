@@ -1,0 +1,8 @@
+package com.policy.creation.MongoExample.passwordPolicy;
+
+public class Snippet {
+	public static void main(String[] args) {
+		AllowCapitalAndSpecialCharacters
+	}
+}
+

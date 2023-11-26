@@ -1,0 +1,34 @@
+import com.policy.creation.MongoExample.OrderRequest;
+import com.policy.creation.MongoExample.CustomerType;
+import com.policy.creation.MongoExample.AgeRule;
+global com.policy.creation.MongoExample.OrderDiscount orderDiscount;
+ 
+dialect "mvel"
+ 
+
+rule "HDFC"
+when
+    $orderRequest: OrderRequest($orderAge: age)//pass passwrod policy object(min lenght,max lenght)
+    $ageRule: AgeRule($ruleAge: age)//input password
+then
+    // Check the condition
+    if ($orderAge < $ruleAge) {
+       orderDiscount.setDiscount(orderDiscount.getDiscount()+200);
+    } else {
+        orderDiscount.setDiscount(orderDiscount.getDiscount()+1);
+    }
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

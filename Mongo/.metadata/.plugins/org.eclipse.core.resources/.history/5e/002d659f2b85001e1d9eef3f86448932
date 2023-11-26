@@ -1,0 +1,25 @@
+package com.policy.creation.MongoExample.passwordPolicy;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PasswordPolicyController {
+	
+	public String createPassword() {
+		
+		PasswordPolicyRules passwordPolicyRules=getPasswordPolicyRulesObject();
+		
+		return null;
+		
+	}
+
+	private PasswordPolicyRules getPasswordPolicyRulesObject() {
+		PasswordPolicyRules passwordPolicyRules=new PasswordPolicyRules();
+		passwordPolicyRules.setMaxPasswordLength(10);
+		passwordPolicyRules.setMinDigits(2);
+		passwordPolicyRules.setMinPasswordLength(6);
+		passwordPolicyRules.setAllowCapitalAndSpecialCharacters(1,3);
+		passwordPolicyRules
+	}
+
+}

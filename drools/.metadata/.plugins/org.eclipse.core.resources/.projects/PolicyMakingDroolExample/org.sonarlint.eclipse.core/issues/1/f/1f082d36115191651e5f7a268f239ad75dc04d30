@@ -1,0 +1,17 @@
+
+ç	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b 5ad0db6db6669a7fbdceaeedfbf0c5b2h
+o	java:S125
+"<This block of commented-out lines of code should be removed.b 7cf25547a11401abfdf22d8d90b466f8h
+o	java:S125"<This block of commented-out lines of code should be removed.b d5ef1fd01d89888bdd3b4c2148f58050h
+w
+java:S1068"CRemove this unused "forcePasswordChangeOnFirstLogin" private field.b 8d6ea5f208f616b9be18e812073d8549h
+i
+java:S1068"5Remove this unused "minPasswordLength" private field.b 9961a0abc4f456ac637dc6acac053629h
+i
+java:S1068"5Remove this unused "maxPasswordLength" private field.b 03fd0b6b5d584aecbec5fc4fb4b03fcdh
+x
+java:S1068"DRemove this unused "allowCapitalAndSpecialCharacters" private field.b c27c44c9b940591be31d47c40855e7b1h
+a
+java:S1068"-Remove this unused "minDigits" private field.b 550aa0d62c837f1bc33595334711b640h
+m
+java:S1068"9Remove this unused "noOfPreviousPasswords" private field.b 26fa2c5f4699719a398e2df962b868bch

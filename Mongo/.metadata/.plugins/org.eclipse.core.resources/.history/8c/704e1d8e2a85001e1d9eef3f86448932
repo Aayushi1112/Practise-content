@@ -1,0 +1,53 @@
+package com.policy.creation.MongoExample;
+
+import org.kie.api.KieServices;
+import org.kie.api.builder.KieBuilder;
+import org.kie.api.builder.KieFileSystem;
+import org.kie.api.builder.KieRepository;
+import org.kie.api.builder.ReleaseId;
+import org.kie.api.executor.ExecutionResults;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+import org.kie.internal.io.ResourceFactory;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.policy.creation.MongoExample.OrderDiscount;
+import com.policy.creation.MongoExample.OrderRequest;
+
+@RestController
+public class MegaOfferController {
+
+	@PostMapping("/order")
+	public OrderDiscount orderNow(@RequestBody OrderRequest orderRequest) {
+		
+		AgeRule ageRule=new AgeRule();
+		ageRule.setAge(120);
+		OrderDiscount orderDiscount = new OrderDiscount();
+		KieSession kieSession=getKieSession();
+		kieSession.setGlobal("orderDiscount", orderDiscount);
+		kieSession.insert(ageRule);
+		kieSession.insert(orderRequest);
+        kieSession.fireAllRules();//we need to find out which rules have failed
+        ExecutionResults results=kieSession.execute(null);
+		kieSession.dispose();
+		return orderDiscount;
+	}
+	
+	public KieSession getKieSession() {
+		KieServices kieServices = KieServices.Factory.get();
+		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
+		kieFileSystem.write(ResourceFactory.newClassPathResource("customer-discount.drl"));
+		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
+		kb.buildAll();
+        KieRepository kieRepository = kieServices.getRepository();
+		ReleaseId krDefaultReleaseId = kieRepository.getDefaultReleaseId();
+		KieContainer kieContainer = kieServices.newKieContainer(krDefaultReleaseId);
+		KieSession kieSession = kieContainer.newKieSession();
+		return kieSession;
+		}
+	
+	
+
+}

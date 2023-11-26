@@ -1,0 +1,9 @@
+
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b 088017733d6438cbc5157f717abca560h
+–
+java:S1488L"bImmediately return this expression instead of assigning it to the temporary variable "kieSession".b 73d27427ce03e3b274fb715170c71354h
+e	java:S106,"+Replace this use of System.out by a logger.8±ø•ƒ¿1b bb1c3f2ea781263d3a2bb92b06a2061fh
+p
+java:S1751-"5Remove this "throw" statement or make it conditional.8±ø•ƒ¿1b 959b7175f88493905e3c324c2bf6f97dh
+e	java:S1063"+Replace this use of System.out by a logger.8±ø•ƒ¿1b bb1c3f2ea781263d3a2bb92b06a2061fh
+v	java:S125%"<This block of commented-out lines of code should be removed.8´Ì©ƒ¿1b c843233ba32b21ad205f0a83ca77002ah

@@ -1,0 +1,12 @@
+
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b b83c291f13c43eae331bd3d1d69134d4h
+‚
+java:S1854"GRemove this useless assignment to local variable "passwordPolicyRules".8Ììïä½1b 326b9d743a157fc09384a624903d5d9fh
+s
+java:S1481"8Remove this unused "passwordPolicyRules" local variable.8Ììïä½1b 65f0a8d1cbec69efe8ed92d9fb83b627h
+
+java:S1488."bImmediately return this expression instead of assigning it to the temporary variable "kieSession".8É±…å½1b 73d27427ce03e3b274fb715170c71354h
+y
+java:S1854">Remove this useless assignment to local variable "kieSession".8É±…å½1b 04055300abdb09764f387d28521fe2ceh
+j
+java:S1481"/Remove this unused "kieSession" local variable.8É±…å½1b f55275ce724aa9c0bdd0e2c1e5da5f92h

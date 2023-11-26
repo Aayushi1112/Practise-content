@@ -1,0 +1,5 @@
+package com.example.drool.PolicyMakingDroolExample.exceptiom;
+
+public class SmallPasswordException {
+
+}

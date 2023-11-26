@@ -1,0 +1,5 @@
+package com.example.drool.PolicyMakingDroolExample.model;
+
+public class Request {
+
+}

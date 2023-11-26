@@ -1,0 +1,32 @@
+import com.example.drool.PolicyMakingDroolExample.model.PasswordPolicy;
+import com.example.drool.PolicyMakingDroolExample.model.PasswordPolicyRules;
+import com.example.drool.PolicyMakingDroolExample.model.Request;
+import com.example.drool.PolicyMakingDroolExample.model.AllowCapitalAndSpecialCharacters;
+
+dialect "mvel"
+
+rule "Check Minimum Password Length"
+when
+   $rules: PasswordPolicyRules($minLength: minPasswordLength)
+   $password: password
+
+then
+    if($password.length() < $minLength)
+    {
+    System.out.println("Password does not meet the minimum length requirement");
+    }
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

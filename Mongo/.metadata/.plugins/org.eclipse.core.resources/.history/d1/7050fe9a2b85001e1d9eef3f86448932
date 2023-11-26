@@ -1,0 +1,5 @@
+package com.policy.creation.MongoExample.passwordPolicy;
+
+public class PasswordPolicyController {
+
+}

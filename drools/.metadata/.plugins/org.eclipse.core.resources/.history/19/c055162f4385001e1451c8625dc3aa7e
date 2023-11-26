@@ -1,0 +1,62 @@
+import com.example.drool.PolicyMakingDroolExample.model.PasswordPolicy;
+import com.example.drool.PolicyMakingDroolExample.model.PasswordPolicyRules;
+import com.example.drool.PolicyMakingDroolExample.model.Request;
+import com.example.drool.PolicyMakingDroolExample.model.AllowCapitalAndSpecialCharacters;
+import com.example.drool.PolicyMakingDroolExample.exceptiom.SmallPasswordException;
+
+dialect "mvel"
+
+rule "Check Minimum Password Length"
+when
+   $rules: PasswordPolicyRules($minLength: minPasswordLength)
+   $requestPassword: Request($password : password)
+
+then
+    if($password.length() < $minLength) {
+    System.out.println("Password does not meet the minimum length requirement");
+    }
+end
+
+
+//***********************************************************************************************************
+
+rule "Check Maximum Password Length"
+when
+   $rules: PasswordPolicyRules($maxLength: maxPasswordLength)
+   $requestPassword: Request($password : password)
+
+then
+   if($password.length() > $minLength) {
+    System.out.println("Password does not meet the maximum length requirement");
+    }
+end
+
+
+//***************************************************************************************************************
+
+rule "Check Minimum Digits"
+when
+    $rules: PasswordPolicyRules(minDigits != null, minDigits > 0,$minDigits: minDigits)
+   $requestPassword: Request($password : password)
+
+then
+  if($password.replaceAll("[^0-9]", "").length() < $rules.minDigits)
+  {
+  System.out.println("Password does not meet the minimum digits requirement");
+  }
+    
+end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

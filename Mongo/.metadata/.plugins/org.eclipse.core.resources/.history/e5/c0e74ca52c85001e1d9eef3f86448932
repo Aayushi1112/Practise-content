@@ -1,0 +1,11 @@
+
+import lombok.Data;
+
+@Data
+public class AllowCapitalAndSpecialCharacters {
+
+	private Integer minSpecialCharacters;
+
+	private Integer minCapitalCharacters;
+
+}

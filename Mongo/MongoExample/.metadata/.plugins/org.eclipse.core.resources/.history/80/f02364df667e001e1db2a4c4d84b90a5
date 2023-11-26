@@ -1,0 +1,64 @@
+package com.policy.creation.MongoExample.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.policy.creation.MongoExample.model.Student;
+import com.policy.creation.MongoExample.repository.StudentRepository;
+
+@RestController
+@RequestMapping("/student")
+public class MyController {
+	
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	@Autowired
+	private MongoTemplate mt;
+	
+	@PostMapping("/save")
+	public ResponseEntity<?> addStudent(@RequestBody Student student){
+		Student save=this.studentRepository.save(student);
+		return ResponseEntity.ok(save);
+	}
+	
+	@GetMapping
+	public ResponseEntity<?> getStudents(){
+		return ResponseEntity.ok(this.studentRepository.findAll());
+	}
+	@GetMapping("/all")
+	public ResponseEntity<?> getAllStudents(){
+		
+		Query query= new Query();
+		query.addCriteria(Criteria.where("id").is(501));
+		query.limit(5);
+
+		List<Student> studs=mt.find(query, Student.class);
+
+		mt.findAndModify(query, update, Book.class);
+		System.out.println("Data Modified");
+		List<Student> student=studentRepository.findBy(null, null);
+		Sort sort = Sort.by("marks").ascending();
+				 // .and(Sort.by("lastname").descending());
+		
+		List<Student> student2=
+		return ResponseEntity.ok(student);
+	}
+	
+	
+	
+	
+	
+
+}

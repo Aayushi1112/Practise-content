@@ -1,0 +1,8 @@
+
+ç	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.b 37d794e9973e369eacec73ce74e1b555h
+v
+java:S1854 ";Remove this useless assignment to local variable "results".8’≤©∆Ω1b 4e7b40e15deab9c03e149d4125f2a38bh
+g
+java:S1481 ",Remove this unused "results" local variable.8’≤©∆Ω1b 53e61336bb49ec978968786b07dea50bh
+ù
+java:S1488."bImmediately return this expression instead of assigning it to the temporary variable "kieSession".8∫–ƒ‰Ω1b 73d27427ce03e3b274fb715170c71354h
